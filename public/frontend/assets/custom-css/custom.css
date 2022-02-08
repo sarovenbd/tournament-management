@@ -1,0 +1,854 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+
+ Helper Css
+ Hero Section
+ Match Section
+ Latest News Section
+ Video Section
+ Team Section
+ Player Section
+ Testimony Section
+ Profile Page
+ Teams Page
+ Stream Page
+ 404 Page
+-------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+
+/*---------------------
+  Helper CSS
+-----------------------*/
+
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.spad-2 {
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+
+/*---------------------
+  Hero
+-----------------------*/
+
+.hero-section {
+	height: 700px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.hs-item .hs-text {
+	text-align: center;
+}
+
+.hs-item .hs-text h4 {
+	color: #ffffff;
+	margin-bottom: 25px;
+}
+
+.hs-item .hs-text h2 {
+	font-size: 48px;
+	color: #ffffff;
+	font-weight: 700;
+	margin-bottom: 32px;
+}
+
+
+/*---------------------
+  Match Section
+-----------------------*/
+
+.match-section {
+	padding: 70px 0 60px;
+}
+
+.ms-content h4 {
+	color: #ffffff;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+.ms-content .mc-table {
+	margin-bottom: 10px;
+}
+
+.ms-content .mc-table table {
+	width: 100%;
+}
+
+.ms-content .mc-table table tr {
+	background: rgba(21, 22, 24, 0.9);
+	margin-bottom: 10px;
+}
+
+.ms-content .mc-table table tr td {
+	padding: 16px 0;
+	width: 200px;
+}
+
+.ms-content .mc-table table tr td img {
+	height: 30px;
+	width: 50px;
+}
+
+.ms-content .mc-table table tr td h6 {
+	color: #ffffff;
+	display: inline-block;
+}
+
+.ms-content .mc-table table tr td.left-team {
+	padding-left: 40px;
+}
+
+.ms-content .mc-table table tr td.left-team img {
+	float: left;
+	margin-right: 10px;
+}
+
+.ms-content .mc-table table tr td.left-team h6 {
+	overflow: hidden;
+	line-height: 30px;
+}
+
+.ms-content .mc-table table tr td.right-team {
+	text-align: right;
+	padding-right: 40px;
+}
+
+.ms-content .mc-table table tr td.right-team img {
+	float: right;
+	margin-left: 10px;
+}
+
+.ms-content .mc-table table tr td.right-team h6 {
+	float: right;
+	line-height: 30px;
+}
+
+.ms-content .mc-table table tr td.mt-content {
+	width: 150px;
+	text-align: center;
+}
+
+.ms-content .mc-table table tr td.mt-content .mc-op {
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.ms-content .mc-table table tr td.mt-content h4 {
+	color: #ffffff;
+	font-weight: 700;
+	margin-top: 14px;
+	margin-bottom: 12px;
+}
+
+/*---------------------
+  Latest News Section
+-----------------------*/
+
+.latest-news-section {
+	padding: 40px 0;
+}
+
+.latest-news-section .col-lg-12 {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.latest-news-section .col-lg-3 {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.latest-news-item {
+	height: 405px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.latest-news-item .si-tag {
+	color: #ffffff;
+	background: #1d8cf8;
+	font-size: 10px;
+	font-weight: 500;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 3px 9px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.latest-news-item .si-text {
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	width: 100%;
+	padding: 0 30px;
+}
+
+.latest-news-item .si-text h5 {
+	margin-bottom: 6px;
+}
+
+.latest-news-item .si-text h5 a {
+	color: #ffffff;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+.latest-news-item .si-text ul li {
+	list-style: none;
+	display: inline-block;
+	font-size: 13px;
+	color: #ffffff;
+	margin-right: 20px;
+	position: relative;
+}
+
+.latest-news-item .si-text ul li:after {
+	position: absolute;
+	right: -12px;
+	top: 0;
+	content: "|";
+}
+
+.latest-news-item .si-text ul li:last-child {
+	margin-right: 0;
+}
+
+.latest-news-item .si-text ul li:last-child:after {
+	display: none;
+}
+
+
+
+/*---------------------
+  Video Section
+-----------------------*/
+
+.video-section {
+	padding: 40px 0;
+	margin-bottom: 40px;
+}
+
+.video-slider.owl-carousel {
+	margin-right: 0;
+}
+
+.video-slider.owl-carousel .col-lg-3 {
+	max-width: 100%;
+}
+
+.video-slider.owl-carousel .owl-nav {
+	position: absolute;
+	right: 15px;
+	top: -78px;
+}
+
+.video-slider.owl-carousel .owl-nav button {
+	font-size: 20px;
+	color: #636363;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #d5d5d5;
+	line-height: 30px;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-right: 10px;
+}
+
+.video-slider.owl-carousel .owl-nav button:last-child {
+	margin-right: 0;
+}
+
+.video-slider.owl-carousel .owl-nav button:hover {
+	background: #1d8cf8;
+	color: #ffffff;
+	border-color: #1d8cf8;
+}
+
+.video-item {
+	height: 200px;
+	position: relative;
+}
+
+.video-item:hover .play-btn {
+	opacity: 1;
+	visibility: visible;
+}
+
+.video-item .vi-title {
+	position: absolute;
+	left: 0;
+	top: 15px;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.video-item .vi-title h5 {
+	color: #ffffff;
+	font-weight: 600;
+	line-height: 26px;
+}
+
+.video-item .play-btn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-20px, -20px);
+	-ms-transform: translate(-20px, -20px);
+	transform: translate(-20px, -20px);
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.video-item .vi-time {
+	font-size: 14px;
+	color: #ffffff;
+	letter-spacing: 1px;
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 3px 10px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+/*---------------------
+  Team Section
+-----------------------*/
+
+.ftco-team {
+	position: relative; 
+}
+		
+.ftco-team .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	opacity: .5;
+	background: #232931; 
+}
+.ftco-team .owl-carousel {
+	margin: 0; 
+}
+.ftco-team .owl-carousel .owl-stage-outer {
+	padding-top: 0;
+	padding-bottom: 0.1em;
+	position: relative; 
+}
+.ftco-team .owl-nav {
+	position: absolute;
+	bottom: 60px !important;
+	left: 0;
+	right: 0;
+	margin: 0 auto; 
+}
+	
+.ftco-team .owl-nav .owl-prev,
+.ftco-team .owl-nav .owl-next {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background: #fff !important;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-ms-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+	opacity: 1; 
+}
+
+.ftco-team .owl-nav .owl-prev span:before,
+.ftco-team .owl-nav .owl-next span:before {
+	font-size: 20px;
+	margin-top: 7px;
+	color: #000000; 
+}
+
+.ftco-team .owl-nav .owl-prev {
+	top: 0 !important;
+	right: 0 !important; 
+}
+	
+.ftco-team .owl-nav .owl-prev:hover, .ftco-team .owl-nav .owl-prev:focus {
+	background: #000000 !important;
+	outline: none !important; 
+}
+.ftco-team .owl-nav .owl-prev:hover span:before, .ftco-team .owl-nav .owl-prev:focus span:before {
+	font-size: 20px;
+	margin-top: 7px;
+	color: #fff; 
+}
+	
+.ftco-team .owl-nav .owl-next {
+	top: 0 !important;
+	right: 0 !important; 
+}
+	
+.ftco-team .owl-nav .owl-next:hover, .ftco-team .owl-nav .owl-next:focus {
+	background: #000000 !important;
+	outline: none !important; 
+}
+.ftco-team .owl-nav .owl-next:hover span:before, .ftco-team .owl-nav .owl-next:focus span:before {
+	font-size: 24px;
+	margin-top: 7px;
+	color: #fff; 
+}
+
+.ftco-team .owl-dots {
+	text-align: center; 
+}
+
+.ftco-team .owl-dots .owl-dot {
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1); 
+}
+
+.ftco-team .owl-dots .owl-dot.active {
+	background: #1d8cf8; 
+}
+  
+.team-wrap .img {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background-size: cover; 
+	background-position: top center;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%; 
+}
+
+.team-wrap .text h3 {
+	color: #fff;
+	font-size: 22px;
+	font-weight: 800; 
+}
+
+.team-wrap .text .position {
+	color: rgba(255, 255, 255, 0.8); 
+}
+
+
+/*---------------------
+  Player Section
+-----------------------*/
+
+.single_team_member {
+  margin-bottom: 10px;
+}
+
+.single_team_member .card-body {
+  padding: 30px 0px 30px 0px;
+}
+
+.single_team_member .card {
+  border: 0px solid;
+}
+
+.single_team_member .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.single_team_member .player_item_date {
+  position: absolute;
+  background-color: #1d8cf8;
+  bottom: 99px;
+  left: 11px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  padding-top: 15px;
+}
+
+.single_team_member .single_team_member {
+  position: relative;
+}
+
+.single_team_member .header_social_icon ul li {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.single_team_member .header_social_icon ul li a {
+  color: #7a7575;
+}
+
+.single_team_member .tean_content {
+  display: inline-block;
+  float: left;
+}
+
+.single_team_member .tean_right_content {
+  float: right;
+  padding-top: 20px;
+}
+
+/*---------------------
+  Testimony Section
+-----------------------*/
+
+.testimony-section {
+	position: relative; 
+}
+
+.testimony-section .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	opacity: .7;
+	background: #232931; 
+}
+
+.testimony-section .owl-carousel {
+	margin: 0; 
+
+}
+.testimony-section .owl-carousel .owl-stage-outer {
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative; 
+}
+
+.testimony-section .owl-nav {
+	position: absolute;
+	bottom: 60px !important;
+	left: 0;
+	right: 0;
+	margin: 0 auto; 
+}
+
+.testimony-section .owl-nav .owl-prev,
+.testimony-section .owl-nav .owl-next {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background: #fff !important;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-ms-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+	opacity: 1; 
+}
+
+.testimony-section .owl-nav .owl-prev span:before,
+.testimony-section .owl-nav .owl-next span:before {
+	font-size: 20px;
+	margin-top: 7px;
+	color: #000000; 
+}
+
+.testimony-section .owl-nav .owl-prev {
+	top: 0 !important;
+	right: 0 !important; 
+}
+
+.testimony-section .owl-nav .owl-prev:hover, .testimony-section .owl-nav .owl-prev:focus {
+	background: #000000 !important;
+	outline: none !important; 
+}
+.testimony-section .owl-nav .owl-prev:hover span:before, .testimony-section .owl-nav .owl-prev:focus span:before {
+	font-size: 20px;
+	margin-top: 7px;
+	color: #fff; 
+}
+
+.testimony-section .owl-nav .owl-next {
+	top: 0 !important;
+	right: 0 !important; 
+}
+
+.testimony-section .owl-nav .owl-next:hover, .testimony-section .owl-nav .owl-next:focus {
+	background: #000000 !important;
+	outline: none !important; 
+}
+.testimony-section .owl-nav .owl-next:hover span:before, .testimony-section .owl-nav .owl-next:focus span:before {
+	font-size: 24px;
+	margin-top: 7px;
+	color: #fff; 
+}
+.testimony-section .owl-dots {
+	text-align: center; 
+}
+.testimony-section .owl-dots .owl-dot {
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1); 
+}
+
+.testimony-section .owl-dots .owl-dot.active {
+	background: #1d8cf8; 
+}
+  
+.testimony-wrap {
+	display: block;
+	position: relative;
+	color: rgba(255, 255, 255, 0.7); 
+}
+.testimony-wrap .user-img {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	background-size: cover; 
+	background-position: top center; 
+	position: relative;
+	margin: 0 auto;
+	background-position: top center; 
+}
+.testimony-wrap .user-img .quote {
+	position: absolute;
+	bottom: -10px;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%; 
+}
+.testimony-wrap .user-img .quote i {
+	color: #1d8cf8; 
+}
+.testimony-wrap p {
+	font-size: 20px; 
+}
+.testimony-wrap .name {
+	font-weight: 800;
+	font-size: 20px;
+	margin-bottom: 0;
+	color: #fff; 
+}
+.testimony-wrap .position {
+	font-size: 18px;
+	color: #b3b3b3; 
+}
+
+/*---------------------
+  Profile Page
+-----------------------*/
+.profile-page .button-container {
+	text-align: center;
+	margin-top: -106px;
+}
+
+.profile-page .page-header {
+	min-height: 550px;
+}
+
+.profile-page .player-img {
+	height: 150px; 
+	width: 150px;
+}
+
+.profile-page .stats .col-sm-2 .stats-details {
+	font-size: 4em; 
+	font-weight: 600;
+}
+
+/*---------------------
+  Teams Page
+-----------------------*/
+.teams-player-img {
+	height:60px; 
+	width: 60px;	
+}
+
+/*---------------------
+  Stream Page
+-----------------------*/
+.stream-container {
+	position: relative;
+}
+  
+.stream-container .play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/*---------------------
+  404 Page
+-----------------------*/
+.error-page .container .title {
+	font-size: 11em;
+}
+/*-------------------------------- Respinsive Media Styles --------------------------------*/
+
+@media only screen and (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+/* Medium Device: 1200px */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	
+	.ms-content .mc-table table tr td.left-team {
+		padding-left: 15px;
+	}
+	.ms-content .mc-table table tr td.right-team {
+		padding-right: 15px;
+	}
+	
+	.ftco-team .owl-nav .owl-next {
+		right: 0 !important; 
+	}
+	
+	.ftco-team .owl-nav .owl-prev {
+		right: 61px !important; 
+	}
+
+	
+	.testimony-section .owl-nav .owl-prev {
+		right: 61px !important; 
+	} 
+	
+	
+	.testimony-section .owl-nav .owl-next {
+		right: 0 !important; 
+	} 
+
+	
+	.ftco-team {
+		background-position: center center !important; 
+	} 
+	
+}
+
+@media only screen and (max-width: 991px) {
+	
+	.schedule-sidebar {
+		margin-top: 30px;
+	}
+	
+	.ftco-team .owl-nav {
+		display: none; 
+	} 
+
+	.testimony-section .owl-nav {
+		display: none;  
+	}
+	
+}
+
+
+/* Tablet Device: 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.copyright-option .co-widget ul li {
+		margin-right: 10px;
+	}
+	
+}
+
+/* Large Mobile: 480px */
+
+@media only screen and (max-width: 767px) {
+
+	.ms-content .mc-table table tr td.left-team {
+		padding-left: 15px;
+	}
+	.ms-content .mc-table table tr td.right-team {
+		padding-right: 15px;
+	}
+	
+	.schedule-text .st-table table tbody tr td.left-team img {
+		float: none;
+		margin-right: 0;
+	}
+	.schedule-text .st-table table tbody tr td.left-team h4 {
+		overflow: visible;
+		display: block;
+		margin-top: 10px;
+	}
+	.schedule-text .st-table table tbody tr td.right-team img {
+		float: none;
+		margin-left: 0;
+	}
+	.schedule-text .st-table table tbody tr td.right-team h4 {
+		float: none;
+		margin-top: 10px;
+	}
+	
+	.hs-slider.owl-carousel .owl-nav {
+		right: 60px;
+	}
+	
+	
+}
+
+/* Small Mobile: 320px */
+
+@media only screen and (max-width: 479px) {
+	
+	.schedule-text .st-table {
+		overflow-x: auto;
+	}
+	
+	
+	.hs-slider.owl-carousel .owl-nav {
+		right: 20px;
+	}
+	
+	.video-item {
+		height: 300px;
+	}
+	
+}
+
+

@@ -1,0 +1,258 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class DataTypesTableSeeder extends Seeder
+{
+
+    /**
+     * Auto generated seed file
+     *
+     * @return void
+     */
+    public function run()
+    {
+        
+
+        \DB::table('data_types')->delete();
+        
+        \DB::table('data_types')->insert(array (
+            0 => 
+            array (
+                'id' => 1,
+                'name' => 'users',
+                'slug' => 'users',
+                'display_name_singular' => 'User',
+                'display_name_plural' => 'Users',
+                'icon' => 'voyager-person',
+                'model_name' => 'TCG\\Voyager\\Models\\User',
+                'policy_name' => 'TCG\\Voyager\\Policies\\UserPolicy',
+                'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2020-04-28 09:48:41',
+                'updated_at' => '2020-04-28 09:48:41',
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'menus',
+                'slug' => 'menus',
+                'display_name_singular' => 'Menu',
+                'display_name_plural' => 'Menus',
+                'icon' => 'voyager-list',
+                'model_name' => 'TCG\\Voyager\\Models\\Menu',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2020-04-28 09:48:41',
+                'updated_at' => '2020-04-28 09:48:41',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'roles',
+                'slug' => 'roles',
+                'display_name_singular' => 'Role',
+                'display_name_plural' => 'Roles',
+                'icon' => 'voyager-lock',
+                'model_name' => 'TCG\\Voyager\\Models\\Role',
+                'policy_name' => NULL,
+                'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2020-04-28 09:48:41',
+                'updated_at' => '2020-04-28 09:48:41',
+            ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'categories',
+                'slug' => 'categories',
+                'display_name_singular' => 'Category',
+                'display_name_plural' => 'Categories',
+                'icon' => 'voyager-categories',
+                'model_name' => 'TCG\\Voyager\\Models\\Category',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2020-04-28 09:48:48',
+                'updated_at' => '2020-04-28 09:48:48',
+            ),
+            4 => 
+            array (
+                'id' => 5,
+                'name' => 'posts',
+                'slug' => 'posts',
+                'display_name_singular' => 'Post',
+                'display_name_plural' => 'Posts',
+                'icon' => 'voyager-news',
+                'model_name' => 'TCG\\Voyager\\Models\\Post',
+                'policy_name' => 'TCG\\Voyager\\Policies\\PostPolicy',
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":"title","scope":null}',
+                'created_at' => '2020-04-28 09:48:49',
+                'updated_at' => '2020-05-03 14:37:43',
+            ),
+            5 => 
+            array (
+                'id' => 6,
+                'name' => 'pages',
+                'slug' => 'pages',
+                'display_name_singular' => 'Page',
+                'display_name_plural' => 'Pages',
+                'icon' => 'voyager-file-text',
+                'model_name' => 'TCG\\Voyager\\Models\\Page',
+                'policy_name' => NULL,
+                'controller' => '',
+                'description' => '',
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => NULL,
+                'created_at' => '2020-04-28 09:48:50',
+                'updated_at' => '2020-04-28 09:48:50',
+            ),
+            6 => 
+            array (
+                'id' => 7,
+                'name' => 'tournaments',
+                'slug' => 'tournaments',
+                'display_name_singular' => 'Tournament',
+                'display_name_plural' => 'Tournaments',
+                'icon' => 'voyager-trophy',
+                'model_name' => 'App\\Tournament',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"title","scope":null}',
+                'created_at' => '2020-04-30 08:58:53',
+                'updated_at' => '2020-05-08 14:52:07',
+            ),
+            7 => 
+            array (
+                'id' => 8,
+                'name' => 'teams',
+                'slug' => 'teams',
+                'display_name_singular' => 'Team',
+                'display_name_plural' => 'Teams',
+                'icon' => 'voyager-people',
+                'model_name' => 'App\\Team',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"title","scope":null}',
+                'created_at' => '2020-04-30 09:12:14',
+                'updated_at' => '2020-04-30 12:14:10',
+            ),
+            8 => 
+            array (
+                'id' => 9,
+                'name' => 'players',
+                'slug' => 'players',
+                'display_name_singular' => 'Player',
+                'display_name_plural' => 'Players',
+                'icon' => 'voyager-person',
+                'model_name' => 'App\\Player',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"name","scope":null}',
+                'created_at' => '2020-04-30 12:10:55',
+                'updated_at' => '2020-05-07 14:24:58',
+            ),
+            9 => 
+            array (
+                'id' => 10,
+                'name' => 'results',
+                'slug' => 'results',
+                'display_name_singular' => 'Result',
+                'display_name_plural' => 'Results',
+                'icon' => 'voyager-certificate',
+                'model_name' => 'App\\Result',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"title","scope":null}',
+                'created_at' => '2020-05-06 15:05:28',
+                'updated_at' => '2020-05-06 15:10:09',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'name' => 'gears',
+                'slug' => 'gears',
+                'display_name_singular' => 'Gear',
+                'display_name_plural' => 'Gears',
+                'icon' => 'voyager-bag',
+                'model_name' => 'App\\Gear',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"name","scope":null}',
+                'created_at' => '2020-05-06 15:28:45',
+                'updated_at' => '2020-05-06 15:30:08',
+            ),
+            11 => 
+            array (
+                'id' => 12,
+                'name' => 'testimonials',
+                'slug' => 'testimonials',
+                'display_name_singular' => 'Testimonial',
+                'display_name_plural' => 'Testimonials',
+                'icon' => 'voyager-star',
+                'model_name' => 'App\\Testimonial',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"name"}',
+                'created_at' => '2020-05-07 16:01:17',
+                'updated_at' => '2020-05-07 16:01:17',
+            ),
+            12 => 
+            array (
+                'id' => 13,
+                'name' => 'streams',
+                'slug' => 'streams',
+                'display_name_singular' => 'Stream',
+                'display_name_plural' => 'Streams',
+                'icon' => 'voyager-video',
+                'model_name' => 'App\\Stream',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":"title","scope":null}',
+                'created_at' => '2020-05-07 16:14:36',
+                'updated_at' => '2020-05-13 04:07:46',
+            ),
+        ));
+        
+        
+    }
+}
