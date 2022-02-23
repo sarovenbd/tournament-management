@@ -10,7 +10,7 @@ class Player extends Model
     use Translatable;
     protected $translatable = ['name','bio','country','age','total_game','wins','loses'];
 
-    public function gears(){
-        return $this->belongsToMany(Gear::class,'player_gear','player_id','gear_id');
-    }
+//    public function gears(){
+//        return $this->belongsToMany(Gear::class,'player_gear','player_id','gear_id');
+//    }
 }

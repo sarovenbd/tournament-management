@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     @yield('meta-tags')
     <title>{{is_null(setting('site.title'))?'': setting('site.title').'-'}}@yield('title')</title>
-  
+
     <link rel="shortcut icon" type="image" href="{{is_null(setting('site.logo'))?'': Storage::url(setting('site.logo'))}}">
-    
+
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
     <link href="{{ asset('frontend/assets/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -67,9 +67,9 @@
                 @if(!is_null(setting('site.lang_switch')) && setting('site.lang_switch')==1)
                 <select class="langSelect">
                     @foreach ($languages as $language)
-                        <option value="{{$language}}" 
+                        <option value="{{$language}}"
                         @if(session()->get('locale')==$language)
-                            selected 
+                            selected
                         @endif
                         >{{$language}}</option>
                     @endforeach
@@ -94,11 +94,6 @@
                     <li class="nav-item">
                         <a href="/" class="nav-link">
                         Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/posts" class="nav-link">
-                        News
                         </a>
                     </li>
                     <li class="nav-item">
@@ -150,4 +145,3 @@
 </body>
 
 </html>
- 
