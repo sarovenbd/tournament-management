@@ -31,7 +31,7 @@
                            </a>
                            <p>{{$player->country}}</p>
                         </div>
-                        <div class="tean_right_content mr-2">
+                        <!-- <div class="tean_right_content mr-2">
                            <div class="header_social_icon">
                               <ul>
                                  <li><a href="//{{$player->facebook_url}}"><i class="fab fa-facebook"></i></a></li>
@@ -39,7 +39,7 @@
                                  <li><a href="//{{$player->facebook_youtube}}"><i class="fab fa-youtube"></i></a></li>
                               </ul>
                            </div>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                </div>

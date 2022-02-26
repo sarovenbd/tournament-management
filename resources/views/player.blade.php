@@ -16,7 +16,7 @@
   </div>
   <div class="section">
     <div class="container">
-      <div class="button-container">
+      <!-- <div class="button-container">
         <a href="//{{$player->twitter_url}}" target="_blank" class="btn btn-default btn-round btn-lg btn-icon">
           <i class="fab fa-twitter"></i>
         </a>
@@ -29,7 +29,7 @@
         <a href="//{{$player->twitch_url}}" target="_blank" class="btn btn-default btn-round btn-lg btn-icon">
           <i class="fab fa-twitch"></i>
         </a>
-      </div>
+      </div> -->
 
       <h2 class="title mt-5 mb-5 text-center">About the Player</h3>
       <div class="row mb-5">
