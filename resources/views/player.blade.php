@@ -3,7 +3,7 @@
 @section('title','Player '.$player->getTranslatedAttribute('name'))
 
 @section('content')
- 
+
 <div class="profile-page">
   <div class="page-header page-header-small">
     <div class="page-header-image" style="background-image: url({{asset('frontend/assets/img/header-bg.jpg')}});">
@@ -31,14 +31,14 @@
         </a>
       </div>
 
-      <h2 class="title mt-5 mb-5 text-center">About the Player</h3> 
+      <h2 class="title mt-5 mb-5 text-center">About the Player</h3>
       <div class="row mb-5">
         <div class="col-md-8 ml-auto mr-auto text-center">
             {!! clean($player->getTranslatedAttribute('bio')) !!}
         </div>
       </div>
 
-      <div class="stats row mb-5 text-center align-items-center d-flex justify-content-center">
+      <!-- <div class="stats row mb-5 text-center align-items-center d-flex justify-content-center">
         <div class="col-sm-2">
             <p class="stats-details text-success">{{ $player->getTranslatedAttribute('total_game') }}</p>
             <p>Games</p>
@@ -51,38 +51,8 @@
           <p class="stats-details text-success">{{ $player->getTranslatedAttribute('loses') }}</p>
           <p>Loses</p>
         </div>
-      </div>
-      
-      @if (count($player->gears)>0)
-        <h2 class="title mt-5 mb-5 text-center">Player Gears</h3> 
-        <div class="row">
-          @foreach ($player->gears as $gear)
-            <div class="col-lg-4 col-md-6">
-              <div class="card card-product">
-                <div class="card-image">
-                  <a href="//{{$gear->link}}" target="_blank">
-                    <img class="img-fluid img-center" src="{{is_null($gear->image)?asset('frontend/assets/img/default.png'):Voyager::image($gear->image)}}" />
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="//{{$gear->link}}" target="_blank" class="card-link text-white">{{$gear->getTranslatedAttribute('name')}}</a>
-                  </h4>
-                  <p class="card-description">
-                    {!!clean(Str::words($gear->getTranslatedAttribute('description'),10))!!}
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <div class="pull-left">
-                    <span class="price">$ {{$gear->getTranslatedAttribute('price')}}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          @endforeach 
-        </div>
-      @endif
-      
+      </div> -->
+
     </div>
   </div>
 
