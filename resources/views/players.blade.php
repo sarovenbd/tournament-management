@@ -26,7 +26,6 @@
                      <img class="img-fluid" src="{{is_null($player->image)?asset('frontend/assets/img/default.png'):Voyager::image($player->image)}}" class="card-img-top" alt="player">
                      <div class="card-body mt-2">
                         <div class="tean_content ml-2">
-                           <a class="player_item_date"><h3>{{$player->getTranslatedAttribute('wins')}}</h3></a>
                            <a href="/player/{{$player->getTranslatedAttribute('slug')}}">
                               <h5 class="card-title">{{$player->getTranslatedAttribute('name')}}</h5>
                            </a>
@@ -50,7 +49,7 @@
 
       <div class="container mt-5">
          <div class="row justify-content-center">
-           {{$players->links()}} 
+           {{$players->links()}}
          </div>
       </div>
   </div>
