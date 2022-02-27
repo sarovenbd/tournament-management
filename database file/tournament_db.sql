@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2022 at 07:17 PM
+-- Generation Time: Feb 27, 2022 at 10:43 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -114,9 +114,6 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (74, 8, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"required|unique:teams,slug\"}}', 4),
 (75, 8, 'about', 'rich_text_box', 'About', 0, 0, 1, 1, 1, 1, '{}', 5),
 (76, 8, 'founding_date', 'date', 'Founding Date', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 6),
-(77, 8, 'wins', 'number', 'Wins', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 7),
-(78, 8, 'loses', 'number', 'Loses', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 8),
-(79, 8, 'total_game', 'number', 'Total Game', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 9),
 (81, 8, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 11),
 (82, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 12),
 (83, 7, 'tournament_belongstomany_team_relationship', 'relationship', 'Teams', 0, 0, 1, 1, 1, 1, '{\"model\":\"App\\\\Team\",\"table\":\"teams\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"tournament_team\",\"pivot\":\"1\",\"taggable\":\"on\"}', 10),
@@ -169,14 +166,13 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (147, 16, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (148, 16, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{}', 2),
 (149, 16, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{}', 3),
-(150, 16, 'bio', 'text', 'Bio', 0, 1, 1, 1, 1, 1, '{}', 4),
-(151, 16, 'age', 'text', 'Age', 0, 1, 1, 1, 1, 1, '{}', 5),
-(152, 16, 'image', 'text', 'Image', 0, 1, 1, 1, 1, 1, '{}', 6),
+(152, 16, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{}', 6),
 (153, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
 (154, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (155, 16, 'dept_id', 'text', 'Dept Id', 0, 0, 0, 0, 0, 0, '{}', 9),
-(156, 16, 'player_belongsto_department_relationship', 'relationship', 'departments', 1, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"data_rows\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
-(157, 16, 'batch', 'text', 'Batch', 0, 1, 1, 1, 1, 1, '{}', 10);
+(156, 16, 'player_belongsto_department_relationship', 'relationship', 'Depertment', 1, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Department\",\"table\":\"departments\",\"type\":\"belongsTo\",\"column\":\"id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"data_rows\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(158, 16, 'std_id', 'text', 'Studen Id', 0, 1, 1, 1, 1, 1, '{}', 4),
+(160, 16, 'batch', 'text', 'Batch', 0, 1, 1, 1, 1, 1, '{}', 5);
 
 -- --------------------------------------------------------
 
@@ -213,13 +209,13 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":\"title\",\"scope\":null}', '2020-04-28 03:48:49', '2020-05-03 08:37:43'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-04-28 03:48:50', '2020-04-28 03:48:50'),
 (7, 'tournaments', 'tournaments', 'Tournament', 'Tournaments', 'voyager-trophy', 'App\\Tournament', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"title\",\"scope\":null}', '2020-04-30 02:58:53', '2020-05-08 08:52:07'),
-(8, 'teams', 'teams', 'Team', 'Teams', 'voyager-people', 'App\\Team', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"title\",\"scope\":null}', '2020-04-30 03:12:14', '2020-04-30 06:14:10'),
+(8, 'teams', 'teams', 'Team', 'Teams', 'voyager-people', 'App\\Team', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"title\",\"scope\":null}', '2020-04-30 03:12:14', '2022-02-26 13:34:36'),
 (10, 'results', 'results', 'Result', 'Results', 'voyager-certificate', 'App\\Result', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"title\",\"scope\":null}', '2020-05-06 09:05:28', '2020-05-06 09:10:09'),
 (11, 'gears', 'gears', 'Gear', 'Gears', 'voyager-bag', 'App\\Gear', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"name\",\"scope\":null}', '2020-05-06 09:28:45', '2020-05-06 09:30:08'),
 (12, 'testimonials', 'testimonials', 'Testimonial', 'Testimonials', 'voyager-star', 'App\\Testimonial', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"name\"}', '2020-05-07 10:01:17', '2020-05-07 10:01:17'),
 (13, 'streams', 'streams', 'Stream', 'Streams', 'voyager-video', 'App\\Stream', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"title\",\"scope\":null}', '2020-05-07 10:14:36', '2020-05-12 22:07:46'),
 (15, 'departments', 'departments', 'Department', 'Departments', NULL, 'App\\Department', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-02-20 11:12:58', '2022-02-20 11:12:58'),
-(16, 'players', 'players', 'Player', 'Players', NULL, 'App\\Player', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-02-20 11:22:23', '2022-02-20 11:41:15');
+(16, 'players', 'players', 'Player', 'Players', NULL, 'App\\Player', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-02-20 11:22:23', '2022-02-26 12:20:45');
 
 -- --------------------------------------------------------
 
@@ -240,7 +236,8 @@ CREATE TABLE `departments` (
 
 INSERT INTO `departments` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'CSE', '2022-02-20 11:14:15', '2022-02-20 11:14:15'),
-(2, 'Textile', '2022-02-20 11:14:31', '2022-02-20 11:14:31');
+(2, 'Textile', '2022-02-20 11:14:31', '2022-02-20 11:14:31'),
+(3, 'EEE', '2022-02-26 12:13:53', '2022-02-26 12:13:53');
 
 -- --------------------------------------------------------
 
@@ -651,21 +648,22 @@ CREATE TABLE `players` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bio` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
+  `std_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `batch` int(11) DEFAULT NULL,
   `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `dept_id` int(11) DEFAULT NULL,
-  `batch` int(11) DEFAULT NULL
+  `dept_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `players`
 --
 
-INSERT INTO `players` (`id`, `name`, `slug`, `bio`, `age`, `image`, `created_at`, `updated_at`, `dept_id`, `batch`) VALUES
-(1, 'roven', 'roven', '', 23, NULL, '2022-02-20 11:42:41', '2022-02-20 11:42:41', NULL, 201);
+INSERT INTO `players` (`id`, `name`, `slug`, `std_id`, `batch`, `image`, `created_at`, `updated_at`, `dept_id`) VALUES
+(1, 'roven', 'roven', '', 23, NULL, '2022-02-20 11:42:41', '2022-02-20 11:42:41', NULL),
+(2, 'Himel', 'himel', '', 23, NULL, '2022-02-26 12:14:23', '2022-02-26 12:14:23', NULL),
+(3, 'asdf', 'team-noob', '201015075', 201, 'players\\February2022\\RIqd9ZKN660rYcsgLLB9.jpg', '2022-02-26 12:21:14', '2022-02-26 12:21:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -827,9 +825,6 @@ CREATE TABLE `teams` (
   `slug` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `about` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `founding_date` date DEFAULT NULL,
-  `wins` int(11) DEFAULT NULL,
-  `loses` int(11) DEFAULT NULL,
-  `total_game` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
@@ -838,8 +833,8 @@ CREATE TABLE `teams` (
 -- Dumping data for table `teams`
 --
 
-INSERT INTO `teams` (`id`, `title`, `logo`, `slug`, `about`, `founding_date`, `wins`, `loses`, `total_game`, `created_at`, `updated_at`) VALUES
-(1, 'Team Noob', 'teams\\February2022\\9V1iyzEnjWRAKkVm7NCQ.png', 'team-noob', '<p>this is team noobthis is team noobthis is team noobthis is team noobthis is team noobthis is team noobthis is team noobthis is team noob</p>', '2022-02-05', 0, 0, 0, '2022-02-21 01:43:00', '2022-02-21 01:44:13');
+INSERT INTO `teams` (`id`, `title`, `logo`, `slug`, `about`, `founding_date`, `created_at`, `updated_at`) VALUES
+(1, 'Team Noob', 'teams\\February2022\\9V1iyzEnjWRAKkVm7NCQ.png', 'team-noob', '<p>this is team noobthis is team noobthis is team noobthis is team noobthis is team noobthis is team noobthis is team noobthis is team noob</p>', '2022-02-05', '2022-02-21 01:43:00', '2022-02-21 01:44:13');
 
 -- --------------------------------------------------------
 
@@ -1128,7 +1123,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT for table `data_types`
@@ -1140,7 +1135,7 @@ ALTER TABLE `data_types`
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1188,7 +1183,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `players`
 --
 ALTER TABLE `players`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `player_team`
